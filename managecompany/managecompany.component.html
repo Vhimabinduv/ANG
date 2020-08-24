@@ -1,0 +1,37 @@
+<br>
+<br>
+<br><br>
+
+
+
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th>sid</th>
+                <th>Comapnyname</th>
+                <th >turnover</th>
+                <th >Board_of_Directors</th>
+                <th >Listed_in_stock_exchange</th>
+                <th >breif</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let company1 of  managecompany">
+                <td>{{company1.sid}}</td>
+                <td>{{company1.companyname}}</td>
+                <td>{{company1.turnover}}</td>
+                <td>{{company1.Board_of_Directors}}</td>
+                <td>{{company1.Listed_in_stock_exchange}}</td>
+                <td>{{company1.breif}}</td>
+                <td><button (click)="updateCompany(company1.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                  <button (click)="deleteCompany(company1.id)" class="btn btn-info" style="margin-left: 10px">delete</button>
+                </td> 
+              </tr>
+            </tbody>
+          
+          </table>
+          <button (click)="createcompany()" class="btn btn-info" style="margin-left: 10px">Create Company</button>
+<router-outlet></router-outlet>

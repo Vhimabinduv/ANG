@@ -1,0 +1,47 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{users | json}}
+<body>
+    
+   
+    <div class="loginbox" >
+      
+        <h1>Login Here</h1>
+
+        
+        <form [formGroup]="myForm2" (ngSubmit)="onSubmit(myForm2)">
+
+
+
+            <div class="form-group">
+         
+             <label>LoginId</label>
+             <input type="text" formControlName="username"class="form-control" name="loginid">
+            </div>
+
+            <div class="form-group">
+                <label>password</label>
+                <input type="password"formControlName="password" class="form-control" name="password" >
+            </div>
+            <input class="btn btn-primary" name="submit" type="submit">
+            
+        </form>
+    </div><br><br><br><br>
+
+
+   
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
